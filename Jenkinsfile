@@ -5,7 +5,7 @@ pipeline {
         // Load Docker Hub credentials from Jenkins credentials store
         DOCKERHUB_CREDENTIALS = credentials('dockerhub')
         // Define the image tag with build number
-        IMAGE_TAG = "perni007/studentsform:${BUILD_NUMBER}"
+        IMAGE_TAG = "skm05/surveyform:${BUILD_NUMBER}"
     }
 
     stages {
@@ -13,7 +13,7 @@ pipeline {
             steps {
                 // Remove previous artifacts and build a new WAR file
                 sh 'rm -rf *.war'
-                sh 'jar -cvf studentsform.war -C "src/main/webapp" .'     
+                sh 'jar -cvf SurveyForm.war -C "src/main/webapp" .'     
                 // Build the Docker image with the defined image tag
                 sh "docker build -t ${IMAGE_TAG} ."
             }
@@ -38,9 +38,9 @@ pipeline {
         stage("Deploying on Kubernetes") {
             steps {
                 // Set the image for the Kubernetes deployment
-                sh "kubectl set image deployment/homework2trial container-0=${IMAGE_TAG} -n default"
+                sh "kubectl set image deployment/homework2demo container-0=${IMAGE_TAG} -n default"
                 // Restart the deployment to apply changes
-                sh "kubectl rollout restart deploy homework2trial -n default"
+                sh "kubectl rollout restart deploy homework2demo -n default"
             }
         }
     }
