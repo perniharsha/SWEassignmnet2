@@ -38,9 +38,9 @@ pipeline {
         stage("Deploying on Kubernetes") {
             steps {
                 // Set the image for the Kubernetes deployment
-                sh "kubectl set image deployment/homework2trial container-0=${IMAGE_TAG} -n default"
+                sh "kubectl set image deployment/assignment2trial container-0=${IMAGE_TAG} -n default"
                 // Restart the deployment to apply changes
-                sh "kubectl rollout restart deploy homework2trial -n default"
+                sh "kubectl rollout restart deploy assignment2trial -n default"
             }
         }
     }
