@@ -1,0 +1,6 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="3.0">
+    <display-name>Student Survey App</display-name>
+    <welcome-file-list>
+        <welcome-file>survey.html</welcome-file>
+    </welcome-file-list>
+</web-app>
