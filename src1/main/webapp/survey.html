@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .form-container {
+            width: 70%;
+            max-width: 900px; 
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+        input[type="text"], input[type="tel"], input[type="email"], input[type="date"], input[type="number"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            max-width: 100%; 
+        }
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .button-group {
+            margin-top: 15px;
+        }
+        .horizontal-options label {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        .question-number {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Student Survey Form</h1>
+        <form action="#" method="POST" id="surveyForm">
+            <div class="form-group">
+                <label for="firstName"><span class="question-number">1.</span> First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName"><span class="question-number">2.</span> Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="streetAddress"><span class="question-number">3.</span> Street Address:</label>
+                <input type="text" id="streetAddress" name="streetAddress" required>
+            </div>
+            <div class="form-group">
+                <label for="city"><span class="question-number">4.</span> City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label for="state"><span class="question-number">5.</span> State:</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            <div class="form-group">
+                <label for="zip"><span class="question-number">6.</span> Zip Code:</label>
+                <input type="text" id="zip" name="zip" required>
+            </div>
+            <div class="form-group">
+                <label for="telephone"><span class="question-number">7.</span> Telephone Number:</label>
+                <input type="tel" id="telephone" name="telephone" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><span class="question-number">8.</span> E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="surveyDate"><span class="question-number">9.</span> Date of Survey:</label>
+                <input type="date" id="surveyDate" name="surveyDate" required>
+            </div>
+
+            <div class="form-group horizontal-options">
+                <label><span class="question-number">10.</span> What did you like most about the campus?</label>
+                <input type="checkbox" id="students" name="likedCampus[]" value="students">
+                <label for="students">Students</label>
+                <input type="checkbox" id="location" name="likedCampus[]" value="location">
+                <label for="location">Location</label>
+                <input type="checkbox" id="campus" name="likedCampus[]" value="campus">
+                <label for="campus">Campus</label>
+                <input type="checkbox" id="atmosphere" name="likedCampus[]" value="atmosphere">
+                <label for="atmosphere">Atmosphere</label>
+                <input type="checkbox" id="dorms" name="likedCampus[]" value="dorms">
+                <label for="dorms">Dorm Rooms</label>
+                <input type="checkbox" id="sports" name="likedCampus[]" value="sports">
+                <label for="sports">Sports</label>
+            </div>
+
+            <div class="form-group horizontal-options">
+                <label><span class="question-number">11.</span> How did you become interested in the university?</label>
+                <input type="radio" id="friends" name="interestSource" value="friends">
+                <label for="friends">Friends</label>
+                <input type="radio" id="television" name="interestSource" value="television">
+                <label for="television">Television</label>
+                <input type="radio" id="internet" name="interestSource" value="internet">
+                <label for="internet">Internet</label>
+                <input type="radio" id="other" name="interestSource" value="other">
+                <label for="other">Other</label>
+            </div>
+
+            <div class="form-group">
+                <label for="recommendation"><span class="question-number">12.</span> How likely are you to recommend this school to other prospective students?</label>
+                <select id="recommendation" name="recommendation">
+                    <option value="veryLikely">Very Likely</option>
+                    <option value="likely">Likely</option>
+                    <option value="unlikely">Unlikely</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="raffle"><span class="question-number">13.</span> Raffle (Enter 10 comma-separated numbers between 1 and 100):</label>
+                <input type="text" id="raffle" name="raffle" required pattern="^([1-9]|[1-9][0-9]|100)(,([1-9]|[1-9][0-9]|100)){9}$">
+            </div>
+
+            <div class="form-group">
+                <label for="comments"><span class="question-number">14.</span> Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4" required></textarea>
+            </div>
+
+            <div class="button-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
