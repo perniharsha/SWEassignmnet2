@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Config
+clusters:
+- name: "homework2trial"
+  cluster:
+    server: "https://ec2-34-203-6-18.compute-1.amazonaws.com/k8s/clusters/c-m-blwflvwc"
+    certificate-authority-data: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJ2akNDQ\
+      VdPZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQkdNUnd3R2dZRFZRUUtFeE5rZVc1aGJXbGoKY\
+      kdsemRHVnVaWEl0YjNKbk1TWXdKQVlEVlFRRERCMWtlVzVoYldsamJHbHpkR1Z1WlhJdFkyRkFNV\
+      GMwTURNMApNVGt4TVRBZUZ3MHlOVEF5TWpNeU1ERTRNekZhRncwek5UQXlNakV5TURFNE16RmFNR\
+      Vl4SERBYUJnTlZCQW9UCkUyUjVibUZ0YVdOc2FYTjBaVzVsY2kxdmNtY3hKakFrQmdOVkJBTU1IV\
+      1I1Ym1GdGFXTnNhWE4wWlc1bGNpMWoKWVVBeE56UXdNelF4T1RFeE1Ga3dFd1lIS29aSXpqMENBU\
+      VlJS29aSXpqMERBUWNEUWdBRVNNRjVGVFVXcGRhMgpMb0NFbTR3STJkZ3RRdmxsd0NoV3hwcThGR\
+      m9zUFhCdXVOMGoydE9QNHU3TE1rbzZvWmhaRDRUQlFpOGdPalhKCjR0MFRSZmxKQjZOQ01FQXdEZ\
+      1lEVlIwUEFRSC9CQVFEQWdLa01BOEdBMVVkRXdFQi93UUZNQU1CQWY4d0hRWUQKVlIwT0JCWUVGQ\
+      TdSNDFmNE1paFFWTXBFMHpCY1ZZcWkxYkw4TUFvR0NDcUdTTTQ5QkFNQ0Ewa0FNRVlDSVFEOQppV\
+      Gt3cHpnbzI5dHp2NkszV0JRZklNUkFvL3JUK2lmMjU3MUl0SzVxb1FJaEFQUlVPNFNuREdXaGtHZ\
+      GVaZ1FzCjhyUkFTNVdUVkhXYTk1bnNNR3J5dnk3LwotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0t"
+
+users:
+- name: "homework2trial"
+  user:
+    token: "kubeconfig-user-w8gqqcj8g4:f8sqvghzhqqnk4fpsbsts4bstfcvxq64jz7gkdk4r8x6w26gmhwqbg"
+
+
+contexts:
+- name: "homework2trial"
+  context:
+    user: "homework2trial"
+    cluster: "homework2trial"
+
+current-context: "homework2trial"
