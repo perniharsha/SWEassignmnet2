@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Config
 clusters:
-- name: "homework2trial"
+- name: "assignment2trial"
   cluster:
     server: "https://ec2-34-203-6-18.compute-1.amazonaws.com/k8s/clusters/c-m-blwflvwc"
     certificate-authority-data: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJ2akNDQ\
@@ -27,6 +27,6 @@ contexts:
 - name: "homework2trial"
   context:
     user: "homework2trial"
-    cluster: "homework2trial"
+    cluster: "assignment2trial"
 
 current-context: "homework2trial"
