@@ -13,7 +13,7 @@ pipeline {
             steps {
                 // Remove previous artifacts and build a new WAR file
                 sh 'rm -rf *.war'
-                sh 'jar -cvf survey.war -C "src/main/webapp" .'     
+                sh 'jar -cvf survey.war -C "src1/main/webapp" .'     
                 // Build the Docker image with the defined image tag
                 sh "docker build -t ${IMAGE_TAG} ."
             }
