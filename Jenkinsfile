@@ -19,7 +19,7 @@ pipeline {
                 sh 'rm -rf *.war'
                 sh 'jar -cvf survey.war -C "src/main/webapp" .'     
                 // Build the Docker image with the defined image tag
-                sh "docker build -t perni007/studentsform:latest ."
+                sh "docker build -t ${IMAGE_TAG}"
             }
         }
 
