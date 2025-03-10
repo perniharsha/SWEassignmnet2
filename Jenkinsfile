@@ -8,7 +8,9 @@ pipeline {
         IMAGE_TAG = "perni007/studentsform:${BUILD_NUMBER}"
     }
 
-     
+   triggers {
+        githubPush()  // Automatically trigger build on GitHub push
+    }  
 
     stages {
         stage('Build') {
